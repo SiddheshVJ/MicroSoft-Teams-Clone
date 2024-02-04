@@ -5,7 +5,7 @@ import bodyParser from 'body-parser'
 import fs from 'fs'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
-
+import db from './config/db'
 
 let app = express()
 dotenv.config()
@@ -24,5 +24,5 @@ app.use('/health', (req, res) => {
 
 
 app.listen(PORT, (err) => {
-    console.log(` Server is running on ${PORT}`)
+    console.log(`Server is running on ${PORT}`)
 })
