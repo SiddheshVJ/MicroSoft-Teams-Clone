@@ -6,6 +6,10 @@ import fs from 'fs'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import db from './config/db'
+import { notFound, errorHandler } from './middleware/errorHandler'
+
+//imports routes here
+import userRoutes from './routes/userRoute'
 
 let app = express()
 dotenv.config()
@@ -22,6 +26,9 @@ app.use('/health', (req, res) => {
     res.send("<h1>Health OK</h1>")
 })
 
+app.use('/api/user', userRoutes)
+app.use(notFound)
+app.use(errorHandler)
 
 app.listen(PORT, (err) => {
     console.log(`Server is running on ${PORT}`)
