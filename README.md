@@ -129,5 +129,3 @@ This project is licensed under the [MIT License](LICENSE).
 - [React Documentation](https://reactjs.org/docs/)
 - [Express.js Documentation](https://expressjs.com/)
 ```
-
-You can customize this template with your project's specific details, such as installation instructions, technologies used, features, and acknowledgements. Once customized, you can include this README.md file in your GitHub repository for others to reference.
